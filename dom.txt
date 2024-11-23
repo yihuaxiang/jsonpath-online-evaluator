@@ -1,0 +1,353 @@
+<div id="root" class="row">
+  <div class="container-fluid">
+    <div class="form-floating">
+      <input id="jsonpath-query" type="text" class="form-control " placeholder="Put JSONPath syntax" value="$.phoneNumbers[:1].type">
+      <label for="jsonpath-query">JSONPath</label>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="row py-2">
+      <div class="col-auto">
+        <div class="form-check form-switch mt-1">
+          <input id="path-switch" type="checkbox" class="form-check-input">
+          <label for="path-switch" class="form-check-label">Output paths</label></div>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-link btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#jsonPathExpressions" aria-expanded="false" aria-controls="collapseExample">Expand JSONPath expressions</button></div>
+    </div>
+    <div class="collapse" id="jsonPathExpressions">
+      <div class="card card-body">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>JSONPath</th>
+              <th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$</td>
+              <td>the root object/element</td></tr>
+            <tr>
+              <td>@</td>
+              <td>the current object/element</td></tr>
+            <tr>
+              <td>. or []</td>
+              <td>child operator</td></tr>
+            <tr>
+              <td>..</td>
+              <td>recursive descent. JSONPath borrows this syntax from E4X.</td></tr>
+            <tr>
+              <td>*</td>
+              <td>wildcard. All objects/elements regardless their names.</td></tr>
+            <tr>
+              <td>[]</td>
+              <td>subscript operator. XPath uses it to iterate over element collections and for predicates. In Javascript and JSON it is the native array operator.</td></tr>
+            <tr>
+              <td>[,]</td>
+              <td>Union operator in XPath results in a combination of node sets. JSONPath allows alternate names or array indices as a set.</td></tr>
+            <tr>
+              <td>[start:end:step]</td>
+              <td>array slice operator borrowed from ES4.</td></tr>
+            <tr>
+              <td>?()</td>
+              <td>applies a filter (script) expression.</td></tr>
+            <tr>
+              <td>()</td>
+              <td>script expression, using the underlying script engine.</td></tr>
+          </tbody>
+        </table>
+        <a href="https://goessner.net/articles/JsonPath/index.html#e2">See: JSONPath expressions - https://goessner.net/</a></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <h2>Inputs</h2>
+        <div id="editor" class=" ace_editor ace_hidpi ace-solarized-dark ace_dark editor" style="width: auto; height: 500px; font-size: 12px;">
+          <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; transform: translate(59px, 320px);" aria-haspopup="false" aria-autocomplete="both" role="textbox" aria-label="Cursor at row 20"></textarea>
+          <div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 48px;">
+            <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; transform: translate(0px, 0px); width: 48px;">
+              <div class="ace_gutter-cell " aria-hidden="false" style="height: 16px; top: 0px;">1
+                <span tabindex="-1" class="ace_fold-widget ace_start ace_open" role="button" aria-label="Toggle code folding, rows 1 through 20" aria-expanded="true" title="Fold code" style="display: inline-block; height: 16px;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 16px;">2
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 32px;">3
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 48px;">4
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="false" style="height: 16px; top: 64px;">5
+                <span class="ace_fold-widget ace_start ace_open" role="button" tabindex="-1" aria-label="Toggle code folding, rows 5 through 9" aria-expanded="true" title="Fold code" style="height: 16px; display: inline-block;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 80px;">6
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 96px;">7
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 112px;">8
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 128px;">9
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="false" style="height: 16px; top: 144px;">10
+                <span class="ace_fold-widget ace_start ace_open" role="button" tabindex="-1" aria-label="Toggle code folding, rows 10 through 19" aria-expanded="true" title="Fold code" style="height: 16px; display: inline-block;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="false" style="height: 16px; top: 160px;">11
+                <span class="ace_fold-widget ace_start ace_open" role="button" tabindex="-1" aria-label="Toggle code folding, rows 11 through 14" aria-expanded="true" title="Fold code" style="height: 16px; display: inline-block;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 176px;">12
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 192px;">13
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 208px;">14
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="false" style="height: 16px; top: 224px;">15
+                <span class="ace_fold-widget ace_start ace_open" role="button" tabindex="-1" aria-label="Toggle code folding, rows 15 through 18" aria-expanded="true" title="Fold code" style="height: 16px; display: inline-block;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 240px;">16
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 256px;">17
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 272px;">18
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 288px;">19
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell ace_gutter-active-line " aria-hidden="true" style="height: 16px; top: 304px;">20
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="ace_scroller " style="line-height: 16px; left: 47.4023px; right: 0px; bottom: 0px;">
+            <div class="ace_content" style="transform: translate(0px, 0px); width: 656.598px; height: 532px;">
+              <div class="ace_layer ace_print-margin-layer">
+                <div class="ace_print-margin" style="left: 580px; visibility: visible;"></div>
+              </div>
+              <div class="ace_layer ace_marker-layer">
+                <div class="ace_active-line" style="height: 16px; top: 304px; left: 0px; right: 0px;"></div>
+                <div class="ace_bracket ace_start ace_br15" style="height: 16px; width: 7.20117px; top: 304px; left: 4px;"></div>
+                <div class="ace_bracket ace_start ace_br15" style="height: 16px; width: 7.20117px; top: 0px; left: 4px;"></div>
+              </div>
+              <div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; transform: translate(0px, 0px);">
+                <div class="ace_line" style="height: 16px; top: 0px;">
+                  <span class="ace_paren ace_lparen">{</span></div>
+                <div class="ace_line" style="height: 16px; top: 16px;">
+                  <span class="ace_variable">"firstName"</span>:
+                  <span class="ace_string">"John"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 32px;">
+                  <span class="ace_variable">"lastName"</span>:
+                  <span class="ace_string">"doe"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 48px;">
+                  <span class="ace_variable">"age"</span>:
+                  <span class="ace_constant ace_numeric">26</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 64px;">
+                  <span class="ace_variable">"address"</span>:
+                  <span class="ace_paren ace_lparen">{</span></div>
+                <div class="ace_line" style="height: 16px; top: 80px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"streetAddress"</span>:
+                  <span class="ace_string">"naist street"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 96px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"city"</span>:
+                  <span class="ace_string">"Nara"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 112px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"postalCode"</span>:
+                  <span class="ace_string">"630-0192"</span></div>
+                <div class="ace_line" style="height: 16px; top: 128px;">
+                  <span class="ace_paren ace_rparen">}</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 144px;">
+                  <span class="ace_variable">"phoneNumbers"</span>:
+                  <span class="ace_paren ace_lparen">[</span></div>
+                <div class="ace_line" style="height: 16px; top: 160px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_paren ace_lparen">{</span></div>
+                <div class="ace_line" style="height: 16px; top: 176px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"type"</span>:
+                  <span class="ace_string">"iPhone"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 192px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"number"</span>:
+                  <span class="ace_string">"0123-4567-8888"</span></div>
+                <div class="ace_line" style="height: 16px; top: 208px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_paren ace_rparen">}</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 224px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_paren ace_lparen">{</span></div>
+                <div class="ace_line" style="height: 16px; top: 240px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"type"</span>:
+                  <span class="ace_string">"home"</span>
+                  <span class="ace_punctuation ace_operator">,</span></div>
+                <div class="ace_line" style="height: 16px; top: 256px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_variable">"number"</span>:
+                  <span class="ace_string">"0123-4567-8910"</span></div>
+                <div class="ace_line" style="height: 16px; top: 272px;">
+                  <span class="ace_indent-guide"></span>
+                  <span class="ace_paren ace_rparen">}</span></div>
+                <div class="ace_line" style="height: 16px; top: 288px;">
+                  <span class="ace_paren ace_rparen">]</span></div>
+                <div class="ace_line" style="height: 16px; top: 304px;">
+                  <span class="ace_paren ace_rparen">}</span></div>
+              </div>
+              <div class="ace_layer ace_marker-layer"></div>
+              <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                <div class="ace_cursor" style="display: block; transform: translate(11px, 304px); width: 7px; height: 16px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; height: 500px; bottom: 0px;">
+            <div class="ace_scrollbar-inner" style="width: 20px; height: 320px;">&nbsp;</div></div>
+          <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 47.4023px; right: 0px; width: 656.598px;">
+            <div class="ace_scrollbar-inner" style="height: 20px; width: 704px;">&nbsp;</div></div>
+          <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+            <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div>
+            <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <h2>Evaluation Results</h2>
+        <div id="editor" class=" ace_editor ace_hidpi ace-solarized-dark ace_dark" style="width: auto; height: 500px; font-size: 12px;">
+          <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; transform: translate(51px, 16px);" aria-haspopup="false" aria-autocomplete="both" role="textbox" aria-label="Cursor at row 1" readonly=""></textarea>
+          <div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 41px;">
+            <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; transform: translate(0px, 0px); width: 41px;">
+              <div class="ace_gutter-cell ace_gutter-active-line " aria-hidden="false" style="height: 16px; top: 0px;">1
+                <span tabindex="-1" class="ace_fold-widget ace_start ace_open" role="button" aria-label="Toggle code folding, rows 1 through 3" aria-expanded="true" title="Fold code" style="display: inline-block; height: 16px;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 16px;">2
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+              <div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 32px;">3
+                <span tabindex="0" style="display: none;"></span>
+                <span tabindex="0" style="display: none;">
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="ace_scroller " style="line-height: 16px; left: 40.2012px; right: 0px; bottom: 0px;">
+            <div class="ace_content" style="transform: translate(0px, 0px); width: 663.799px; height: 532px;">
+              <div class="ace_layer ace_print-margin-layer">
+                <div class="ace_print-margin" style="left: 580px; visibility: visible;"></div>
+              </div>
+              <div class="ace_layer ace_marker-layer">
+                <div class="ace_active-line" style="height: 16px; top: 0px; left: 0px; right: 0px;"></div>
+                <div class="ace_bracket ace_start ace_br15" style="height: 16px; width: 7.20117px; top: 0px; left: 4px;"></div>
+                <div class="ace_bracket ace_start ace_br15" style="height: 16px; width: 7.20117px; top: 32px; left: 4px;"></div>
+              </div>
+              <div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; transform: translate(0px, 0px);">
+                <div class="ace_line" style="height: 16px; top: 0px;">
+                  <span class="ace_paren ace_lparen">[</span></div>
+                <div class="ace_line" style="height: 16px; top: 16px;">
+                  <span class="ace_string">"iPhone"</span></div>
+                <div class="ace_line" style="height: 16px; top: 32px;">
+                  <span class="ace_paren ace_rparen">]</span></div>
+              </div>
+              <div class="ace_layer ace_marker-layer"></div>
+              <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                <div class="ace_cursor" style="display: block; transform: translate(11px, 0px); width: 7px; height: 16px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; height: 500px; bottom: 0px;">
+            <div class="ace_scrollbar-inner" style="width: 20px; height: 48px;">&nbsp;</div></div>
+          <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 40.2012px; right: 0px; width: 663.799px;">
+            <div class="ace_scrollbar-inner" style="height: 20px; width: 704px;">&nbsp;</div></div>
+          <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+            <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div>
+            <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
